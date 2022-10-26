@@ -39,6 +39,6 @@ data:
     [[inputs.swap]]
     [[inputs.system]]
     [[inputs.prometheus]]
-      urls = ["http://localhost:9090/metrics"]
+      urls = ["http://prometheus.monitoring.svc:8080"]
     [[inputs.kubernetes]]
       url = "http://1.1.1.1:10255"

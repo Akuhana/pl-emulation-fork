@@ -61,9 +61,9 @@ spec:
               name: grafana-claim1
             - mountPath: /var/lib/grafana/dashboards/
               name: grafana-claim2
-            - mountPath: /etc/grafana/provisioning/datasources
-              name: grafana-datasources
-              readOnly: false
+            # - mountPath: /etc/grafana/provisioning/datasources
+            #   name: grafana-datasources
+            #   readOnly: false
       restartPolicy: Always
       volumes:
         - name: grafana-data
@@ -75,8 +75,8 @@ spec:
         - name: grafana-claim2
           persistentVolumeClaim:
             claimName: grafana-claim2
-        - name: grafana-datasources
-          configMap:
-              defaultMode: 420
-              name: grafana-datasources
+        # - name: grafana-datasources
+        #   configMap:
+        #       defaultMode: 420
+        #       name: grafana-datasources
 status: {}
